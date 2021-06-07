@@ -39,8 +39,6 @@ print("""***********************************
 
 user_selection = input('> ')
 
-order_menu = {}
-
 while user_selection != "quit":
     if user_selection not in order_menu:
         order_menu[user_selection] = 0
