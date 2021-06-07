@@ -32,7 +32,6 @@ print("\n".join(entrees))
 print("\n".join(desserts))
 print("\n".join(drinks))
 
-
 print("""***********************************
 ** What would you like to order? **
 ***********************************
@@ -40,12 +39,9 @@ print("""***********************************
 
 user_selection = input('> ')
 
-order_menu = {}
-
 while user_selection != "quit":
     if user_selection not in order_menu:
         order_menu[user_selection] = 0
     order_menu[user_selection] +=1
     print(f" \n** {order_menu[user_selection]} order of {user_selection} have been added to your meal")
     user_selection = input('\n> ')
-
