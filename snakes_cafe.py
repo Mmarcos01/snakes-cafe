@@ -47,4 +47,3 @@ while user_selection != "quit":
     order_menu[user_selection] +=1
     print(f" \n** {order_menu[user_selection]} order of {user_selection} have been added to your meal")
     user_selection = input('\n> ')
-
