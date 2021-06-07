@@ -6,7 +6,7 @@ print("""**************************************
 **************************************
 """)
 
-menu = {
+order_menu = {
   'Wings': 0,
   'Cookies':0,
   'Spring Rolls':0,
@@ -22,17 +22,10 @@ menu = {
   'Unicorn Tears':0
 }
 
-# appetizers = ['Appetizers', '----------', 'Wings', 'Cookies', 'Spring Rolls', '']
-# entrees = ['Entrees', '-----', 'Salmon', 'Steak', 'Meat Tornado', 'A Literal Garden', '']
-# desserts = ['Desserts', '--------', 'Ice Cream', 'Cake', 'Pie', '']
-# drinks = ['Drinks', '------', 'Coffee', 'Tea', 'Unicorn Tears', '']
-
-# for i in appetizers:
-#     for f in entrees:
-#       print(i, f)
-
-# for i in appetizers:
-#   print(appetizers)
+appetizers = ['Appetizers', '----------', 'Wings', 'Cookies', 'Spring Rolls', '']
+entrees = ['Entrees', '-----', 'Salmon', 'Steak', 'Meat Tornado', 'A Literal Garden', '']
+desserts = ['Desserts', '--------', 'Ice Cream', 'Cake', 'Pie', '']
+drinks = ['Drinks', '------', 'Coffee', 'Tea', 'Unicorn Tears', '']
 
 print("\n".join(appetizers))
 print("\n".join(entrees))
@@ -40,13 +33,19 @@ print("\n".join(desserts))
 print("\n".join(drinks))
 
 
-# for i, j in zip(appetizers, entrees):
-#     print (i, j)
-
-order = input("""***********************************
+print("""***********************************
 ** What would you like to order? **
 ***********************************
->""")
+""")
 
-print(f"Your Order: {order}")
+user_selection = input('> ')
+
+order_menu = {}
+
+while user_selection != "quit":
+    if user_selection not in order_menu:
+        order_menu[user_selection] = 0
+    order_menu[user_selection] +=1
+    print(f" \n** {order_menu[user_selection]} order of {user_selection} have been added to your meal")
+    user_selection = input('\n> ')
 
