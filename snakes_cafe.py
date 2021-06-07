@@ -32,7 +32,6 @@ print("\n".join(entrees))
 print("\n".join(desserts))
 print("\n".join(drinks))
 
-
 print("""***********************************
 ** What would you like to order? **
 ***********************************
